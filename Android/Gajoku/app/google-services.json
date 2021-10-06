@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "423022614851",
+    "firebase_url": "https://gajoku-5c85d.firebaseio.com",
+    "project_id": "gajoku-5c85d",
+    "storage_bucket": "gajoku-5c85d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423022614851:android:3fcb90c101a699bf",
+        "android_client_info": {
+          "package_name": "com.sw.capstone.gajoku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423022614851-leosbdg67o1m17sc9nrnr373vgc2g3kc.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "423022614851-leosbdg67o1m17sc9nrnr373vgc2g3kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrg4patXEc12mkLQt2xqLU1yn5qUziuEw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

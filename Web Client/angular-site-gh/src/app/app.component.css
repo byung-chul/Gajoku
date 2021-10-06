@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/earlyaccess/hanna.css");
+
+.navbar.navbar-default.navbar-custom{
+  background-color: #00e7c4;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Hanna', sans-serif;
+}
+
+

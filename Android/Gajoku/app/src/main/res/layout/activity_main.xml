@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sw.capstone.gajoku.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_menuIcon"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:background="@color/mColorWeak"
+        app:srcCompat="@drawable/menu_icon" />
+
+    <TextView
+        android:id="@+id/textView_myAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView_menuIcon"
+        android:layout_toRightOf="@+id/imageView_menuIcon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/mColorWeak"
+        android:gravity="center_vertical"
+        android:text="My address in this textView"
+        android:textSize="14dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView_menuIcon">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView_banner_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="30dp"
+                app:srcCompat="@drawable/discount" />
+
+
+            <android.support.v7.widget.GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView_banner_main"
+                app:alignmentMode="alignBounds"
+                app:columnCount="1">
+
+                <ImageView
+                    android:id="@+id/button_foodType_korean"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:srcCompat="@drawable/korean" />
+
+                <ImageView
+                    android:id="@+id/button_foodType_chinese"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_vertical"
+                    app:srcCompat="@drawable/chinese" />
+
+                <ImageView
+                    android:id="@+id/button_foodType_chicken"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:srcCompat="@drawable/chicken" />
+
+                <ImageView
+                    android:id="@+id/button_foodType_pizza"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:srcCompat="@drawable/pizza" />
+
+                <ImageView
+                    android:id="@+id/button_foodType_bunsik"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:srcCompat="@drawable/bunsik" />
+
+                <ImageView
+                    android:id="@+id/button_foodType_bojok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:srcCompat="@drawable/bojok" />
+
+                <ImageView
+                android:id="@+id/button_foodType_dosirak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                app:layout_columnWeight="1"
+                app:srcCompat="@drawable/dosirak" />
+
+                <ImageView
+                    android:id="@+id/button_foodType_fastfood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    app:layout_columnWeight="1"
+                    app:srcCompat="@drawable/fastfood" />
+
+            </android.support.v7.widget.GridLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

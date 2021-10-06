@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40e0d0">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/title"
+        android:text="가조쿠 라이더스"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/bmjua" />
+
+</RelativeLayout>

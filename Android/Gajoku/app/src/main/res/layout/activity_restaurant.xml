@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_menuIcon_restaurant"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        app:srcCompat="@drawable/menu_icon" />
+
+    <TextView
+        android:id="@+id/textView_restaurantMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="음식점"
+        android:textColor="@color/mColorPrimaryDark"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_menuIcon_restaurant"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
+        android:id="@+id/scrollView_restaurant_button">
+
+        <RadioGroup
+            android:id="@+id/radioGroup_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_korean"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="한식"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_chinese"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="중국집"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_chicken"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="치킨"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_pizza"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="피자"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_bunsik"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="분식"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_bojok"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="보쌈/족발"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_dosirak"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="도시락"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_restaurent_fastfood"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="패스트푸드"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scrollView_restaurant_button">
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BucketListActivity">
+
+    <TextView
+        android:id="@+id/textView_bucketList_titleText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="장바구니"
+        android:textColor="@color/mColorPrimaryDark"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_bucketList_restaurantTitle"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/textView_bucketList_titleText"
+        android:background="@color/mColorPrimaryDark"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:text="음식점 이름"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_bucket"
+        android:layout_width="match_parent"
+        android:layout_height="331dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_bucketList_restaurantTitle"
+        android:layout_above="@id/imageView_bucket_coin"/>
+
+    <ImageView
+        android:id="@+id/imageView_bucket_coin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView_bucket_order"
+        app:srcCompat="@drawable/coin" />
+
+    <TextView
+        android:id="@+id/textView_bucket_totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView_bucket_order"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="61dp"
+        android:gravity="center_vertical"
+        android:text="합계: "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView_bucket_order"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mColorPrimary"
+        android:gravity="center"
+        android:text="주문하기"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+</RelativeLayout>

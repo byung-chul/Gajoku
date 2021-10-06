@@ -1,0 +1,7 @@
+{
+  "sdb_host": "aa18bzyi8yva4my.c6kurvxnjviu.ap-northeast-2.rds.amazonaws.com",
+  "sdb_user": "root",
+  "sdb_password": "rootroot",
+  "sdb_port": "3306",
+  "sdb_database": "Gajoku"
+}

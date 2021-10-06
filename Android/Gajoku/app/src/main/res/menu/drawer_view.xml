@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/planet_group_1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_logout_fragment"
+            android:icon="@android:drawable/ic_partial_secure"
+            android:title="로그아웃" />
+        <item
+            android:id="@+id/nav_address_fragment"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="주소" />
+        <item
+            android:id="@+id/nav_order_fragment"
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="내 주문" />
+
+    </group>
+</menu>

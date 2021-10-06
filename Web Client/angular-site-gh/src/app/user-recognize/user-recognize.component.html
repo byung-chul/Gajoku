@@ -1,0 +1,153 @@
+<div class="example-container mat-elevation-z8">
+
+  <mat-table #table [dataSource]="dataSource" class="mat-cell">
+
+    <ng-container matColumnDef="customerId">
+      <mat-header-cell *matHeaderCellDef> 손님 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.customerId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="customerAddress">
+      <mat-header-cell *matHeaderCellDef> 주소 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.customerAddress}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="orderCost">
+      <mat-header-cell *matHeaderCellDef> 가격 </mat-header-cell>
+      <mat-cell *matCellDef="let element" > {{element.orderCost}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="timestamp">
+      <mat-header-cell *matHeaderCellDef> 주문시간 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.timestamp}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> 주문접수 </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-button-toggle color="alert" (click)="clickpush(element.orderId); clickpush2()" class="receipt">접수</mat-button-toggle>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions3">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-raised-button color="alert" (click)="clickpush3()" class="send">보내기</button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element" ></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *cdkRowDef="let row; columns: displayedColumns;"
+             (click)="menulist2(row.orderId)"
+             [ngClass]="{'click' : row.orderId == returnindex(), 'match1' : row.matchingId == 1, 'match2' : row.matchingId == 2
+             , 'match3' : row.matchingId == 3, 'match4' : row.matchingId == 4 , 'match5' : row.matchingId == 5, 'match6' : row.matchingId == 6
+             , 'match7' : row.matchingId == 7, 'match8' : row.matchingId == 8, 'match9' : row.matchingId == 9, 'match10' : row.matchingId == 10
+             , 'match11' : row.matchingId == 11, 'match12' : row.matchingId == 12, 'match13' : row.matchingId == 11, 'match14' : row.matchingId == 14
+             , 'match15' : row.matchingId == 15, 'match16' : row.matchingId == 16, 'match17' : row.matchingId == 17, 'match18' : row.matchingId == 18
+             , 'match19' : row.matchingId == 19, 'match20' : row.matchingId == 20, 'match21' : row.matchingId == 21, 'match22' : row.matchingId == 22
+             , 'match23' : row.matchingId == 23, 'match24' : row.matchingId == 24, 'match24' : row.matchingId == 24, 'match25' : row.matchingId == 25
+             , 'match26' : row.matchingId == 26, 'match27' : row.matchingId == 27, 'match28' : row.matchingId == 28, 'match29' : row.matchingId == 29}"></mat-row>
+  </mat-table>
+</div>
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource2" class="mat-cell2">
+
+    <ng-container matColumnDef="cost">
+      <mat-header-cell *matHeaderCellDef> 가격 </mat-header-cell>
+      <mat-cell *matCellDef="let element2"> {{element2.cost}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="menu">
+      <mat-header-cell *matHeaderCellDef> 음식 </mat-header-cell>
+      <mat-cell *matCellDef="let element2"> {{element2.menu}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <mat-header-cell *matHeaderCellDef> 개수 </mat-header-cell>
+      <mat-cell *matCellDef="let element2"> {{element2.quantity}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+    <mat-row *matRowDef="let myRowData; columns: displayedColumns2"></mat-row>
+  </mat-table>
+</div>
+
+<!--
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="customerId">
+      <mat-header-cell *matHeaderCellDef> 손님 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.customerId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="customerAddress">
+      <mat-header-cell *matHeaderCellDef> 주소 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.customerAddress}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="orderCost">
+      <mat-header-cell *matHeaderCellDef> 가격 </mat-header-cell>
+      <mat-cell *matCellDef="let element" > {{element.orderCost}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="timestamp">
+      <mat-header-cell *matHeaderCellDef> 주문시간 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.timestamp}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> 주문접수 </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-button-toggle color="alert" (click)="clickpush(element.orderId); clickpush2()">접수</mat-button-toggle>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions3">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-raised-button color="alert" (click)="clickpush3()">보내기</button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element" ></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *cdkRowDef="let row; columns: displayedColumns;"
+             (click)="menulist2(row.orderId)"
+             [ngClass]="{'click' : row.orderId == returnindex(), 'match1' : row.matchingId == 1, 'match2' : row.matchingId == 2
+             , 'match3' : row.matchingId == 3, 'match4' : row.matchingId == 4 , 'match5' : row.matchingId == 5, 'match6' : row.matchingId == 6
+             , 'match7' : row.matchingId == 7, 'match8' : row.matchingId == 8, 'match9' : row.matchingId == 9, 'match10' : row.matchingId == 10
+             , 'match11' : row.matchingId == 11, 'match12' : row.matchingId == 12, 'match13' : row.matchingId == 11, 'match14' : row.matchingId == 14
+             , 'match15' : row.matchingId == 15, 'match16' : row.matchingId == 16, 'match17' : row.matchingId == 17, 'match18' : row.matchingId == 18
+             , 'match19' : row.matchingId == 19, 'match20' : row.matchingId == 20, 'match21' : row.matchingId == 21, 'match22' : row.matchingId == 22
+             , 'match23' : row.matchingId == 23, 'match24' : row.matchingId == 24, 'match24' : row.matchingId == 24, 'match25' : row.matchingId == 25
+             , 'match26' : row.matchingId == 26, 'match27' : row.matchingId == 27, 'match28' : row.matchingId == 28, 'match29' : row.matchingId == 29}"></mat-row>
+  </mat-table>
+</div>
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource2">
+
+    <ng-container matColumnDef="cost">
+      <mat-header-cell *matHeaderCellDef> 가격 </mat-header-cell>
+      <mat-cell *matCellDef="let element2"> {{element2.cost}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="menu">
+      <mat-header-cell *matHeaderCellDef> 음식 </mat-header-cell>
+      <mat-cell *matCellDef="let element2"> {{element2.menu}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <mat-header-cell *matHeaderCellDef> 개수 </mat-header-cell>
+      <mat-cell *matCellDef="let element2"> {{element2.quantity}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+    <mat-row *matRowDef="let myRowData; columns: displayedColumns2"></mat-row>
+  </mat-table>
+</div>
+
+-->

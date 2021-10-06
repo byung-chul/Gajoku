@@ -1,0 +1,90 @@
+<div class="page page-users">
+
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    class="login-form form-horizontal"
+  >
+    <div class="contentBox">
+      <h3 class="contentBoxTop">New User</h3>
+
+      <fieldset>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_admin}">
+          <label for="r_admin" class="col-sm-3 control-label">Id*</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" formControlName="r_admin" id="r_admin">
+            <span *ngIf="formErrors.r_admin" class="help-block">{{formErrors.r_admin}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_password}">
+          <label for="r_password" class="col-sm-3 control-label">Password*</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="password" formControlName="r_password" id="r_password">
+            <span *ngIf="formErrors.r_password" class="help-block">{{formErrors.r_password}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.passwordConfirmation}">
+          <label for="passwordConfirmation" class="col-sm-12 control-label">Password 재입력*</label>
+          <div class="col-sm-9 col-sm-offset-3">
+            <input class="form-control" type="password" formControlName="passwordConfirmation" id="passwordConfirmation">
+            <span *ngIf="formErrors.passwordConfirmation" class="help-block">{{formErrors.passwordConfirmation}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_type}">
+          <label for="r_type" class="col-sm-12 control-label">타입</label>
+          <div class="col-sm-9 col-sm-offset-3">
+            <input class="form-control" type="text" formControlName="r_type" id="r_type">
+            <span *ngIf="formErrors.r_type" class="help-block">{{formErrors.r_type}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_name}">
+          <label for="r_name" class="col-sm-3 control-label">이름</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" formControlName="r_name" id="r_name">
+            <span *ngIf="formErrors.r_name" class="help-block">{{formErrors.r_name}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_number}">
+          <label for="r_number" class="col-sm-3 control-label">전화번호*</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" formControlName="r_number" id="r_number">
+            <span *ngIf="formErrors.r_number" class="help-block">{{formErrors.r_number}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_address}">
+          <label for="r_address" class="col-sm-3 control-label">주소*</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" formControlName="r_address" id="r_address">
+            <span *ngIf="formErrors.r_address" class="help-block">{{formErrors.r_address}}</span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.r_detail}">
+          <label for="r_detail" class="col-sm-3 control-label">상세주소</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" formControlName="r_detail" id="r_detail">
+            <span *ngIf="formErrors.r_detail" class="help-block">{{formErrors.r_detail}}</span>
+          </div>
+        </div>
+        <!--
+        <div class="form-group" [ngClass]="{'has-error': formErrors.email}">
+          <label for="email" class="col-sm-3 control-label">Email</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" formControlName="email" id="email">
+            <span *ngIf="formErrors.email" class="help-block">{{formErrors.email}}</span>
+          </div>
+        </div>
+        -->
+        <p>
+          <small>*필수입력</small>
+        </p>
+        <div *ngIf="errorResponse?.message" class="alert alert-danger">
+          {{errorResponse?.message}}
+        </div>
+      </fieldset>
+    </div>
+    <div class="buttons">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/restaurant_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/textView_noRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="근처에 음식점이 없습니다!"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView_noRestaurant"
+        android:layout_width="218dp"
+        android:layout_height="188dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="131dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/no_result" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_restaurant"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="95dp"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="156dp"
+        android:visibility="visible" />
+
+</RelativeLayout>

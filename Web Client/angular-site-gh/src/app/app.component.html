@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a [routerLink]="['/']" class="navbar-brand" style="color: #ffffff">배달의 가족</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li [routerLinkActive]="['active']">
+              <a [routerLink]="['/','users']" style="color: #ffffff">사용자</a>
+            </li>
+            <li [routerLinkActive]="['active']">
+              <a [routerLink]="['/','menu']" style="color: #ffffff">메뉴판</a>
+            </li>
+            <li [routerLinkActive]="['active']">
+              <a [routerLink]="['/','recognize']" style="color: #ffffff">주문대기</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="!authService.isLoggedIn()" [routerLinkActive]="['active']">
+              <a [routerLink]="['/','login']" style="color: #ffffff">로그인</a>
+            </li>
+            <li *ngIf="!authService.isLoggedIn()" [routerLinkActive]="['active']">
+              <a [routerLink]="['/','new']" style="color: #ffffff">회원가입</a>
+            </li>
+            <li *ngIf="authService.isLoggedIn()">
+              <a (click)="authService.logout()" style="color: #ffffff">나가기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

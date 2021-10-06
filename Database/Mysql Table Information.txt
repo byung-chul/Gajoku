@@ -1,0 +1,47 @@
+고객 테이블
+    Id(VARCHAR(45))
+        고객의 ID
+        PK
+        NOT NULL 
+    pw(VARCHAR(45))
+        고객의 Password
+        NOT NULL
+    pNumber(VARCHAR(45))
+        고객의 연락처
+        NOT NULL
+    Address(VARCHAR(45))
+        고객의 주소
+        Default = NULL
+        MultiValue
+주문 테이블
+    orderId(INT(11)) 
+        주문번호(주문내역의 ID)
+        PK
+        NOT NULL
+    customerId(VARCHAR(45))
+        주문자(고객)의 id
+        NOT NULL
+        Foreign Key 
+    restaurantId(INT(11))
+        음식점의 id
+        NOT NULL
+        Foreign Key
+    orderContent(VARCHAR(45))
+        주문내용 
+        NOT NULL
+        MultiValue
+
+가게
+    restaurantId(INT(11))
+        음식점의 고유ID
+        PK
+        NOT NULL
+    restaurantName(VARCHAR(45))
+        음식점의 이름 (예) BBQ, BHC등등
+        NOT NULL
+    restaurantNumber(VARCHAR(45))
+        음식점의 전화번호
+        Default = NULL
+    restaurantMenu(VARCHAR(45))
+        음식점의 메뉴정보
+        Default = NULL

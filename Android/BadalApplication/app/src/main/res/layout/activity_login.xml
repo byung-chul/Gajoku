@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/bmjua"
+        android:text="가조쿠 라이더스 출근" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="150dp"
+            android:background="#40e0d0">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#e1ffff"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginBottom="9dp">
+
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="#76ccc3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/editText_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="60dp"
+                        android:ems="10"
+                        android:hint="가조쿠 ID"
+                        android:inputType="textPersonName"
+                        android:textColorHint="#ffffff"
+                        android:textColor="#ffffff"
+                        android:textColorLink="#000000"
+                        android:fontFamily="@font/bmjua"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_pw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="160dp"
+                        android:ems="10"
+                        android:hint="가조쿠 PASSWORD"
+                        android:inputType="textPersonName"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff"
+                        android:textColorLink="#000000"
+                        android:fontFamily="@font/bmjua"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="로그인"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/bmjua"
+            android:background="#40e0d0"/>
+
+</RelativeLayout>

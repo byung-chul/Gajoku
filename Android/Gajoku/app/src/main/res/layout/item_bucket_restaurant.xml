@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mColorWeak"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView_menuCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/korean_banner" />
+
+    <ImageView
+        android:id="@+id/imageView_bucket_cancelBucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/mColorPrimaryDark"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <TextView
+        android:id="@+id/textView_bucket_menuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_menuCapture"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="메뉴 이름"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView_bucket_priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_bucket_menuName"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="30dp"
+        android:text="가격"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textView_bucket_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_bucket_menuName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="30dp"
+        android:text="가격"
+        android:textColor="@android:color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView_bucket_quantityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_bucket_priceText"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="30dp"
+        android:text="수량"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textView_bucket_quantity"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_bucket_quantityText"
+        android:layout_toLeftOf="@+id/imageView_bucket_quantityUp"
+        android:gravity="center_horizontal"
+        android:text="10"
+        android:textColor="@android:color/black"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/imageView_bucket_quantityUp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_alignTop="@+id/textView_bucket_quantityText"
+        android:layout_below="@+id/textView_bucket_priceText"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageView
+        android:id="@+id/imageView_bucket_quantityDown"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/textView_bucket_quantityText"
+        android:layout_below="@+id/textView_bucket_priceText"
+        android:layout_toLeftOf="@+id/textView_bucket_quantity"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+</RelativeLayout>

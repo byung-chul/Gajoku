@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_reservation_surplusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:text="남은 주문 금액"
+        android:textColor="@color/mColorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView_reservation_surplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_reservation_surplusText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:text="여기에 남은 금액 들어감"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView_divider_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textView_reservation_surplus"
+        android:layout_marginTop="15dp"
+        android:background="@color/mColorPrimary"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView_reservation_distanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_divider_reservation"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="거리"
+        android:textColor="@color/mColorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView_reservation_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_reservation_distanceText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:text="여기에 거리 들어감"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView_divider_reservation2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textView_reservation_distance"
+        android:layout_marginTop="15dp"
+        android:background="@color/mColorPrimary"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView_noReservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="현재 예약이 없습니다!"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView_noReservation"
+        android:layout_width="218dp"
+        android:layout_height="188dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="131dp"
+        app:srcCompat="@drawable/no_result" />
+
+</RelativeLayout>
